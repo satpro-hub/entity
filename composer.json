@@ -1,0 +1,10 @@
+{
+    "name": "satpro-hub/entity",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "SatproHub\\Entity\\": "src/"
+        }
+    },
+    "require": {}
+}
