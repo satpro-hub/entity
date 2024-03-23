@@ -1,6 +1,9 @@
 <?php
+
 namespace SatproHub\Entity\Console\Commands;
+
 use Illuminate\Console\Command;
+use SatproHub\Entity\Services\HandleService;
 
 class EntityCommand extends Command
 {
@@ -9,7 +12,7 @@ class EntityCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:entity';
+    protected $signature = 'make:entity {object}';
 
     /**
      * The console command description.
@@ -23,5 +26,7 @@ class EntityCommand extends Command
      */
     public function handle(): void
     {
+        $object = $this->argument('object');
+        (new HandleService())->handle($object);
     }
 }
