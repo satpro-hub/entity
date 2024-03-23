@@ -3,11 +3,20 @@
 namespace SatproHub\Entity\Services\Contract;
 
 use SatproHub\Entity\Contracts\MakeEntityContract;
+use SatproHub\Entity\Services\MakeEntity;
 
-class MakeContract implements MakeEntityContract
+class MakeContract extends MakeEntity implements MakeEntityContract
 {
-    public function handle(string $object)
+
+    protected $directory = 'Contracts';
+    protected $postfix = 'RepositoryContract';
+    protected $type = 'interface';
+
+    public function handle()
     {
-        // TODO: Implement handle() method.
+        $content = $this->build();
+        $this->createEntity($content);
     }
+
+
 }

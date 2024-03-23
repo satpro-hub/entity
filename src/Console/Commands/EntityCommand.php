@@ -27,6 +27,7 @@ class EntityCommand extends Command
     public function handle(): void
     {
         $object = $this->argument('object');
-        (new HandleService())->handle($object);
+        HandleService::handle($object);
+        $this->info('The command was successful!');
     }
 }
