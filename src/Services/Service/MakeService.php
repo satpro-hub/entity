@@ -6,7 +6,7 @@ use SatproHub\Entity\Contracts\MakeEntityContract;
 
 class MakeService implements MakeEntityContract
 {
-    public function handle(string $object)
+    public function handle()
     {
 
     }

@@ -4,8 +4,8 @@ namespace SatproHub\Entity\Objects;
 
 class Entity
 {
-    public $path;
-    public $name;
+    public string $path;
+    public string $name;
 
     public function __construct(string $string)
     {
@@ -18,4 +18,5 @@ class Entity
         }
         $this->path = implode($separator, $arr);
     }
+
 }
